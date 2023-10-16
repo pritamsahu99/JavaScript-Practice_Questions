@@ -239,4 +239,3 @@
 // console.log(filterStrings(strings));
 
 // 18. Write a function that takes an object and returns an array of all the keys in the object.
-
