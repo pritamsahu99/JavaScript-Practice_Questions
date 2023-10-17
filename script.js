@@ -240,6 +240,20 @@
 
 // 18. Write a function that takes an object and returns an array of all the keys in the object.
 
+// function keysOfObjects(objects){
+//     let keys = [];
+//     keys.push(...Object.keys(objects));
+//     return keys;
+// }
+// const objects = {
+//     name: 'Pritam',
+//     work: 'Student',
+//     age: 23
+// };
+// console.log(keysOfObjects(objects));
+
+//Or
+
 function objects(obj){
     let keyArr=[];
     for (const key in obj) {
@@ -256,17 +270,6 @@ console.log(objects(
      c:'three'
     }
 ));
-// function keysOfObjects(objects){
-//     let keys = [];
-//     keys.push(...Object.keys(objects));
-//     return keys;
-// }
-// const objects = {
-//     name: 'Pritam',
-//     work: 'Student',
-//     age: 23
-// };
-// console.log(keysOfObjects(objects));
 
 //Or
 
