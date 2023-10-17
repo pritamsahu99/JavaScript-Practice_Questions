@@ -240,54 +240,40 @@
 
 // 18. Write a function that takes an object and returns an array of all the keys in the object.
 
-// function keysOfObjects(objects){
-//     let keys = [];
-//     keys.push(...Object.keys(objects));
-//     return keys;
+function objects(obj){
+    let keyArr=[];
+    for (const key in obj) {
+        if (Object.entries.call(obj, key)) {
+            keyArr.push(key);
+        }
+    }
+    return keyArr;
+}
+console.log(objects(
+    {
+     a: 'one', 
+     b: 'two',
+     c:'three'
+    }
+));
+
+//Or
+
+// function objects(obj){
+//     let keyArr=[];
+//     for (const key in obj) {
+//         if (Object.entries.call(obj, key)) {
+//             keyArr.push(key);
+//         }
+//     }
+//     return keyArr;
 // }
-// const objects = {
-//     name: 'Pritam',
-//     work: 'Student',
-//     age: 23
-// };
-// console.log(keysOfObjects(objects));
-
-//Or
-
-function objects(obj){
-    let keyArr=[];
-    for (const key in obj) {
-        if (Object.entries.call(obj, key)) {
-            keyArr.push(key);
-        }
-    }
-    return keyArr;
-}
-console.log(objects(
-    {
-     a: 'one', 
-     b: 'two',
-     c:'three'
-    }
-));
-
-//Or
-
-function objects(obj){
-    let keyArr=[];
-    for (const key in obj) {
-        if (Object.entries.call(obj, key)) {
-            keyArr.push(key);
-        }
-    }
-    return keyArr;
-}
-console.log(objects(
-    {
-     a: 'one', 
-     b: 'two',
-     c:'three'
-    }
-));
+// console.log(objects(
+//     {
+//      a: 'one', 
+//      b: 'two',
+//      c:'three'
+//     }
+// ));
 
 // 19. Write a function that takes an array of objects and returns an array of all the values of a specified property name.
