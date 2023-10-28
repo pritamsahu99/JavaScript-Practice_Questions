@@ -296,3 +296,14 @@
 
 // Object Creation and Composition:
 // 26. Implement a function that generates a person object with properties for name, age, and gender. Then, create an array of person objects and use methods to filter and find people of a certain age or gender.
+/* 
+How do you declare an empty array in JavaScript, and what are some common methods for adding and removing elements from it?
+
+What is the difference between an array and an object in JavaScript? How can you access and manipulate the properties or elements within each data structure?
+
+Explain the concept of callback functions in JavaScript. Provide an example of how you might use a callback function with an array manipulation method.
+
+What is a closure in JavaScript, and how can it be created? How might closures be useful in the context of functions that work with objects or arrays?
+
+Describe the purpose and usage of the map and filter functions for arrays in JavaScript. Provide an example of how each of these functions can be used to transform or filter an array of objects.
+*/
