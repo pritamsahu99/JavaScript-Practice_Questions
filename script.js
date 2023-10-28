@@ -277,3 +277,5 @@ console.log(objects(
 // ));
 
 // 19. Write a function that takes an array of objects and returns an array of all the values of a specified property name.
+// 20. Given an unsorted array i.e. [8, 2, -2, -3, 0, -4, 6, 4, -5]. First sort the array without using array.sort method then find the pair which gave sum = 0 and store that output in result variable.
+// 21. Write a program that checks two strings length are equal to each other or are anagram. Show the output as Boolean value without using toLowerCase().split('').sort().join('') methods.
