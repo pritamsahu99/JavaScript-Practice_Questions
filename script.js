@@ -240,22 +240,22 @@
 
 // 18. Write a function that takes an object and returns an array of all the keys in the object.
 
-function objects(obj){
-    let keyArr=[];
-    for (const key in obj) {
-        if (Object.entries.call(obj, key)) {
-            keyArr.push(key);
-        }
-    }
-    return keyArr;
-}
-console.log(objects(
-    {
-     a: 'one', 
-     b: 'two',
-     c:'three'
-    }
-));
+// function objects(obj){
+//     let keyArr=[];
+//     for (const key in obj) {
+//         if (Object.entries.call(obj, key)) {
+//             keyArr.push(key);
+//         }
+//     }
+//     return keyArr;
+// }
+// console.log(objects(
+//     {
+//      a: 'one', 
+//      b: 'two',
+//      c:'three'
+//     }
+// ));
 
 //Or
 
@@ -277,5 +277,22 @@ console.log(objects(
 // ));
 
 // 19. Write a function that takes an array of objects and returns an array of all the values of a specified property name.
+
 // 20. Given an unsorted array i.e. [8, 2, -2, -3, 0, -4, 6, 4, -5]. First sort the array without using array.sort method then find the pair which gave sum = 0 and store that output in result variable.
+
 // 21. Write a program that checks two strings length are equal to each other or are anagram. Show the output as Boolean value without using toLowerCase().split('').sort().join('') methods.
+
+// Array Filtering and Mapping:
+// 22. Given an array of numbers, create a new array that contains only the even numbers, and then square each of these even numbers. Implement this using filter() and map().
+
+// Object Manipulation:
+// 23. You have an object representing a student with properties like name, age, and grades. Write a function that takes an array of such student objects and calculates the average grade for all students.
+
+// Function Callbacks:
+// 24. Create a function that accepts an array of strings and a callback function. The callback function should modify each string in the array by adding " - Processed" to the end of it. Then, the main function should return the modified array.
+
+// Array Sorting:
+// 25. Given an array of objects representing products with properties like name, price, and quantity, write a function that sorts the products by price from the highest to lowest, and for products with the same price, sort them by name alphabetically.
+
+// Object Creation and Composition:
+// 26. Implement a function that generates a person object with properties for name, age, and gender. Then, create an array of person objects and use methods to filter and find people of a certain age or gender.
