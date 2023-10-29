@@ -280,7 +280,73 @@
 
 // 20. Given an unsorted array i.e. [8, 2, -2, -3, 0, -4, 6, 4, -5]. First sort the array without using array.sort method then find the pair which gave sum = 0 and store that output in result variable.
 
+// When array is sortd already
+
+    // function pairSumGiveZero(array) {
+    //     for(let numbers of array){
+    //         // console.log(numbers)
+    //         for( j = 1; j < array.length; j++){
+    //             if(numbers + array[j] === 0){
+    //                 return [numbers , array[j]];
+    //             }
+    //         }
+    //     }
+    // }
+    // const newArray = pairSumGiveZero([ -5, -4, -3, -2, 0, 2, 4, 6, 8 ]);
+    // console.log(newArray);
+
+    // // OR When not sorted
+    // function findPairWithSumZero(array) {
+    //     array.sort((a, b) => a - b); // Sort the array in ascending order.
+    
+    //     let left = 0;
+    //     let right = array.length - 1;
+    
+    //     while (left < right) {
+    //         const sum = array[left] + array[right];
+    
+    //         if (sum === 0) {
+    //             return [array[left], array[right]];
+    //         } else if (sum < 0) {
+    //             left++;
+    //         } else {
+    //             right--;
+    //         }
+    //     }
+    
+    //     return null; // If no such pair is found, return null.
+    // }
+    
+    // const unsortedArray = [8, 2, -2, -3, 0, -4, 6, 4, -5];
+    // const result = findPairWithSumZero(unsortedArray);
+    
+    // if (result !== null) {
+    //     console.log("Pair with sum of 0 found:", result);
+    // } else {
+    //     console.log("No pair with sum of 0 found.");
+    // }
+    
 // 21. Write a program that checks two strings length are equal to each other or are anagram. Show the output as Boolean value without using toLowerCase().split('').sort().join('') methods.
+
+// function isAnagram(str1, str2){
+//     if(str1.length !== str2.length){
+//         return false;
+//     }
+//     const countLetters = {};
+//     for(let letters of str1){
+//         countLetters[letters] = (countLetters[letters] || 0) + 1;
+//        // console.log(countLetters[letters]);
+//     }
+//     for(let chars of str2){
+//         if(!countLetters[chars]){
+//             return false;
+//         }
+//         countLetters[chars]-=1;
+//     }
+//     return true;
+// }
+// const newStr = isAnagram("Pritam","iraPtm");
+// console.log(newStr);
 
 // Array Filtering and Mapping:
 // 22. Given an array of numbers, create a new array that contains only the even numbers, and then square each of these even numbers. Implement this using filter() and map().
