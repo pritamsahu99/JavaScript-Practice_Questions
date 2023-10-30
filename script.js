@@ -362,6 +362,25 @@
 
 // Object Creation and Composition:
 // 26. Implement a function that generates a person object with properties for name, age, and gender. Then, create an array of person objects and use methods to filter and find people of a certain age or gender.
+// 27. Count unique number from array [1,1,2,2,3,4,4,5,6,7,8,8].
+
+function getUniqNum(array){
+    if(array.length > 0){
+      let i = 0;
+      for(j = 1; j < array.length; j++){
+        if(array[i] !== array[j]) {
+            i++;
+            array[i] = array[j];
+        }
+      }
+        return i+1;
+    } else {
+      throw new Error("Empty");
+    }
+    
+  }
+  const result = getUniqNum([1,1,2,2,3,4,4,5,6,7,8,8]);
+    console.log(result);
 /* 
 How do you declare an empty array in JavaScript, and what are some common methods for adding and removing elements from it?
 
@@ -373,3 +392,4 @@ What is a closure in JavaScript, and how can it be created? How might closures b
 
 Describe the purpose and usage of the map and filter functions for arrays in JavaScript. Provide an example of how each of these functions can be used to transform or filter an array of objects.
 */
+
