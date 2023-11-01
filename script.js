@@ -276,7 +276,23 @@
 //     }
 // ));
 
-// 19. Write a function that takes an array of objects and returns an array of all the values of a specified property name.
+// 19. Write a JavaScript program to find out whether two given arrays are identical or not?
+
+// function isIdenticalArrays(arr1, arr2) {
+//   if (arr1 === null || arr2 === null) {
+//     throw Error("Both arrays should be non-null");
+//     }
+//     if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+//       throw Error("Both arguments should be arrays")
+//     }
+//     if (arr1.length !== arr2.length) {
+//       return false;
+//     }
+//     const sortedA = [...arr1].sort();
+//     const sortedB = [...arr2].sort();
+//     return JSON.stringify(sortedA) == JSON.stringify(sortedB);
+//   }
+//   console.log(isIdenticalArrays([1, 2, 3], [1, 2, 3]));
 
 // 20. Given an unsorted array i.e. [8, 2, -2, -3, 0, -4, 6, 4, -5]. First sort the array without using array.sort method then find the pair which gave sum = 0 and store that output in result variable.
 
@@ -364,23 +380,25 @@
 // 26. Implement a function that generates a person object with properties for name, age, and gender. Then, create an array of person objects and use methods to filter and find people of a certain age or gender.
 // 27. Count unique number from array [1,1,2,2,3,4,4,5,6,7,8,8].
 
-function getUniqNum(array){
-    if(array.length > 0){
-      let i = 0;
-      for(j = 1; j < array.length; j++){
-        if(array[i] !== array[j]) {
-            i++;
-            array[i] = array[j];
-        }
-      }
-        return i+1;
-    } else {
-      throw new Error("Empty");
-    }
-    
-  }
-  const result = getUniqNum([1,1,2,2,3,4,4,5,6,7,8,8]);
-    console.log(result);
+// function getUniqNum(array){
+//     if(array.length > 0){
+//       let i = 0;
+//       for(j = 1; j < array.length; j++){
+//         if(array[i] !== array[j]) {
+//           i++;
+//           array[i] = array[j];
+//         }
+//       }
+//       return i+1;
+//     } else {
+//       throw new Error("Empty");
+//     }
+//   }
+//   const result = getUniqNum([1,1,2,2,3,4,4,5,6,7,8,8]);
+//   console.log(result);
+
+// 28. Write a function that takes an array of objects and returns an array of all the values of a specified property name.
+
 /* 
 How do you declare an empty array in JavaScript, and what are some common methods for adding and removing elements from it?
 
