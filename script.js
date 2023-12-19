@@ -383,26 +383,47 @@
 // 26. Implement a function that generates a person object with properties for name, age, and gender. Then, create an array of person objects and use methods to filter and find people of a certain age or gender.
 // 27. Count unique number from array [1,1,2,2,3,4,4,5,6,7,8,8].
 
-// function getUniqNum(array){
-//     if(array.length > 0){
-//       let i = 0;
-//       for(j = 1; j < array.length; j++){
-//         if(array[i] !== array[j]) {
-//           i++;
-//           array[i] = array[j];
+// function getUniqueNum(array){
+//     if (array.length > 0){
+//         let i = 0;
+//         for (let j = 1; j < array.length; j++){
+//             if (array[i] != array[j]) {
+//                 i++;
+//                 array[i] = array[j];
+//             }
 //         }
-//       }
-//       return i+1;
+//         return i+1;
 //     } else {
-//       throw new Error("Empty");
+//         throw new Error ("Array is empty.");
 //     }
-//   }
-//   const result = getUniqNum([1,1,2,2,3,4,4,5,6,7,8,8]);
-//   console.log(result);
+// }
+// const result = getUniqueNum ([1,1,2,2,3,4,4,5,5,6,7,8,8,9,9,9]);
+// console.log(result);
 
-// 28. Write a function that takes an array of objects and returns an array of all the values of a specified property name.
-
+// 28. Write function largest sum of consecutive numbers given array [1,2,3,4,5,6,7,8,9,10,11,12].
+    function consNums(array, num){
+        if(num > array.length){
+            throw new Error ('Your num is greater than array!');
+        } else {
+            let max = 0;
+            for (let i = 0; i < array.length - num + 1; i++) {
+                let tmp = 0;
+                for (let j = 0; j < num; j++) {
+                    console.log("i "+i+" j "+j);
+                    tmp += array[i + j];
+                }
+                if (tmp > max) {
+                    max = tmp;
+                }
+            }
+           return max;
+        }
+    }
+const newRslt = consNums([1,2,3,4,5,6,7,8], 4);
+console.log(newRslt);
 /* 
+Write a function that takes an array of objects and returns an array of all the values of a specified property name.
+
 How do you declare an empty array in JavaScript, and what are some common methods for adding and removing elements from it?
 
 What is the difference between an array and an object in JavaScript? How can you access and manipulate the properties or elements within each data structure?
