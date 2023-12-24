@@ -401,26 +401,45 @@
 // console.log(result);
 
 // 28. Write function largest sum of consecutive numbers given array [1,2,3,4,5,6,7,8,9,10,11,12].
-    function consNums(array, num){
-        if(num > array.length){
-            throw new Error ('Your num is greater than array!');
+//     function consNums(array, num){
+//         if(num > array.length){
+//             throw new Error ('Your num is greater than array!');
+//         } else {
+//             let max = 0;
+//             for (let i = 0; i < array.length - num + 1; i++) {
+//                 let tmp = 0;
+//                 for (let j = 0; j < num; j++) {
+//                     console.log("i "+i+" j "+j);
+//                     tmp += array[i + j];
+//                 }
+//                 if (tmp > max) {
+//                     max = tmp;
+//                 }
+//             }
+//            return max;
+//         }
+//     }
+// const newRslt = consNums([1,2,3,4,5,6,7,8], 4);
+// console.log(newRslt);
+
+// 29. divide and conq.
+function divCon(arr,myNum){
+    let strtIndx = 0;
+    let endIndx = arr.length - 1;
+    while (strtIndx <= endIndx){
+        let midIndx = Math.floor((strtIndx + endIndx) / 2);
+        if (arr[midIndx] < myNum) {
+            strtIndx = midIndx + 1;
+        } else if (arr[midIndx] > myNum) {
+            endIndx = midIndx - 1;
         } else {
-            let max = 0;
-            for (let i = 0; i < array.length - num + 1; i++) {
-                let tmp = 0;
-                for (let j = 0; j < num; j++) {
-                    console.log("i "+i+" j "+j);
-                    tmp += array[i + j];
-                }
-                if (tmp > max) {
-                    max = tmp;
-                }
-            }
-           return max;
+            return midIndx;
         }
     }
-const newRslt = consNums([1,2,3,4,5,6,7,8], 4);
-console.log(newRslt);
+    return -1;
+}
+const result = divCon([1,2,3,4,5,6,7,8,9],3);
+console.log(result);
 /* 
 Write a function that takes an array of objects and returns an array of all the values of a specified property name.
 
