@@ -423,23 +423,44 @@
 // console.log(newRslt);
 
 // 29. divide and conq.
-function divCon(arr,myNum){
-    let strtIndx = 0;
-    let endIndx = arr.length - 1;
-    while (strtIndx <= endIndx){
-        let midIndx = Math.floor((strtIndx + endIndx) / 2);
-        if (arr[midIndx] < myNum) {
-            strtIndx = midIndx + 1;
-        } else if (arr[midIndx] > myNum) {
-            endIndx = midIndx - 1;
-        } else {
-            return midIndx;
+// function divideConq(arr,myNum){
+//     let strtIndx = 0;
+//     let endIndx = arr.length - 1;
+//     while (strtIndx <= endIndx){
+//         let midIndx = Math.floor((strtIndx + endIndx) / 2);
+//         if (arr[midIndx] < myNum) {
+//             strtIndx = midIndx + 1;
+//         } else if (arr[midIndx] > myNum) {
+//             endIndx = midIndx - 1;
+//         } else {
+//             return midIndx;
+//         }
+//     }
+//     return -1;
+// }
+// const result = divideConq([1,2,3,4,5,6,7,8,9],3);
+// console.log(result);
+
+// 30. Check array that includes square of another array if yes, then true and vice versa using javascript.
+    function checkSquare(array1, array2){
+        for (let i = 0; i < array1.length; i++) {
+           const newArray = array1[i] * array1[i];
+            // console.log(newArray);
+            let isSquare = false;
+            for (let j = 0 ; j < array2.length; j++){
+                if (newArray === array2[j]) {
+                    isSquare = true;                    
+                } else if (j === array2.length-1){
+                if (!isSquare) {
+                        return false;
+                    }   
+                }
+            }
         }
+        return true;
     }
-    return -1;
-}
-const result = divCon([1,2,3,4,5,6,7,8,9],3);
-console.log(result);
+    const res = checkSquare([1,2,3,4],[1,4,9,17])
+    console.log(res);
 /* 
 Write a function that takes an array of objects and returns an array of all the values of a specified property name.
 
