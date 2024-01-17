@@ -44,9 +44,9 @@
 //     return reversedStr;
 //   }
   
-//   const strToReverse = "pritam";
-//   const reversed = revStr(strToReverse);
-//   console.log(`Reverse of ${strToReverse} is: ${reversed}`);
+//   const reversedStr = "pritam";
+//   const reversed = revStr(reversedStr);
+//   console.log(`Reverse of '${reversedStr}' is: ${reversed}`);
 
 //   // 06. Write a program that takes a number and checks whether it is positive, negative, or zero
 
@@ -69,7 +69,6 @@
 // let multiTable = (num) => {
 //     for(let i = 1; i <= 10; i++){
 //         console.log(`${num} * ${i} = ${num*i}`);
-
 //     }
 // }
 // multiTable(4);
@@ -103,12 +102,12 @@
 // For example, given the arrays [1, 2, 3, 4, 5] and [3, 4, 5, 6, 7], the function should return [3, 4, 5].
 // Hint: You may need to use nested loops and conditional statements to solve this problem.
 
-// function findcommonelements(a1, a2) {
+// function findcommonelements(arr1, arr2) {
 //     let commonElement = [];
-//     for(let x=0 ;x<a1.length;x++){
-//         for(let y=0;y<a2.length;y++){
-//             if((a1[x]==a2[y]) && !commonElement.includes(a1[x])){
-//                 commonElement.push(a1[x]);
+//     for(let x=0 ;x<arr1.length;x++){
+//         for(let y=0;y<arr2.length;y++){
+//             if((arr1[x]==arr2[y]) && !commonElement.includes(arr1[x])){
+//                 commonElement.push(arr1[x]);
 //             }
 //         }
 //     }
@@ -140,7 +139,7 @@
 // function greet(name){
 //     console.log(`Hello ${name}`);
 // }
-// greet('Pritam Pyare.');
+// greet('Pritam Pyare');
 
 // 12. Write a function called 'getSquare' that takes a number parameter and returns its square.
 
