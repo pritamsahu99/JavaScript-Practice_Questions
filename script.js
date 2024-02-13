@@ -371,7 +371,28 @@
 
 // Object Manipulation:
 // 23. You have an object representing a student with properties like name, age, and grades. Write a function that takes an array of such student objects and calculates the average grade for all students.
-
+function calculateAverageGrade(students) {
+    if (students.length === 0) {
+      return 0; // Return 0 if the array is empty to avoid division by zero
+    }
+    // Use Array.reduce to sum up all the grades
+    const totalGrades = students.reduce((sum, student) => {
+      return sum + student.grades;
+    }, 0);
+  
+    // Calculate the average by dividing the total grades by the number of students
+    const averageGrade = totalGrades / students.length;
+  
+    return averageGrade;
+  }
+  // Example usage:
+  const student1 = { name: 'John', age: 20, grades: 85 };
+  const student2 = { name: 'Jane', age: 21, grades: 90 };
+  const student3 = { name: 'Bob', age: 22, grades: 78 };
+  const studentsArray = [student1, student2, student3];
+  const averageGrade = calculateAverageGrade(studentsArray);
+  console.log(`Average Grade: ${averageGrade}`);
+  
 // Function Callbacks:
 // 24. Create a function that accepts an array of strings and a callback function. The callback function should modify each string in the array by adding " - Processed" to the end of it. Then, the main function should return the modified array.
 
@@ -441,25 +462,25 @@
 // console.log(result);
 
 // 30. Check array that includes square of another array if yes, then true and vice versa using javascript.
-    function checkSquare(array1, array2){
-        for (let i = 0; i < array1.length; i++) {
-           const newArray = array1[i] * array1[i];
-            // console.log(newArray);
-            let isSquare = false;
-            for (let j = 0 ; j < array2.length; j++){
-                if (newArray === array2[j]) {
-                    isSquare = true;                    
-                } else if (j === array2.length-1){
-                if (!isSquare) {
-                        return false;
-                    }   
-                }
-            }
-        }
-        return true;
-    }
-    const res = checkSquare([1,2,3,4],[1,4,9,17])
-    console.log(res);
+// function checkSquare(array1, array2){
+//     for (let i = 0; i < array1.length; i++) {
+//        const newArray = array1[i] * array1[i];
+//         // console.log(newArray);
+//         let isSquare = false;
+//         for (let j = 0 ; j < array2.length; j++){
+//             if (newArray === array2[j]) {
+//                 isSquare = true;                    
+//             } else if (j === array2.length-1){
+//             if (!isSquare) {
+//                     return false;
+//                 }   
+//             }
+//         }
+//     }
+//     return true;
+// }
+// const res = checkSquare([1,2,3,4],[1,4,9,17])
+// console.log(res);
 /* 
 Write a function that takes an array of objects and returns an array of all the values of a specified property name.
 
